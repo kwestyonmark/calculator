@@ -44,11 +44,11 @@ class Calculator {
                 result = prev - current
                 break
             case '/':
-                if(current === 0) {
-                    this.operation = undefined
-                    this.recentOperand = ''
-                    return this.currentOperand = 'ERROR'
-                }
+                // if(current === 0) {
+                //     this.operation = undefined
+                //     this.recentOperand = ''
+                //     return this.currentOperand = 'ERROR'
+                // }
                 result = prev / current
                 break
             case 'x':
