@@ -12,7 +12,13 @@ class Calculator {
     }
 
     delete() {
+        if (this.currentOperand != '') {
         this.currentOperand = this.currentOperand.toString().slice(0, -1)
+        }else {
+        this.operation = ''
+        this.currentOperand = this.recentOperand
+        this.recentOperand = ''
+        }
     }
 
     appendNumber(number) {
@@ -44,11 +50,12 @@ class Calculator {
                 result = prev - current
                 break
             case '/':
-                // if(current === 0) {
-                //     this.operation = undefined
-                //     this.recentOperand = ''
-                //     return this.currentOperand = 'ERROR'
-                // }
+                if(current === 0) {
+                    window.open('https://youtu.be/dQw4w9WgXcQ')
+                    this.operation = undefined
+                    this.recentOperand = ''
+                    return this.currentOperand = 'LOL 🤣'
+                }
                 result = prev / current
                 break
             case 'x':
